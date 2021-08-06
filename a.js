@@ -43,7 +43,7 @@ fetch('t.txt')
         var content = document.getElementById('content');
         var t = data;
         console.log(t);
-        var lstXmlStrings = t.split('\r\n');
+        var lstXmlStrings = t.split('\n');
         // console.log(data);
 
 
