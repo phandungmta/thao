@@ -42,11 +42,12 @@ fetch('t.txt')
         // Do something with your data
         var content = document.getElementById('content');
         var t = data;
+        console.log(t);
         var lstXmlStrings = t.split('\r\n');
         // console.log(data);
 
 
-        console.log(lstXmlStrings.length);
+        console.log(lstXmlStrings);
         // lstXmlStrings.forEach((item) => myFunction(item, content));
         lstXmlStrings.forEach((item, i) => {
             setTimeout(() => {
