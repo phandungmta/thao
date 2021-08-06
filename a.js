@@ -44,10 +44,6 @@ fetch('t.txt')
         var t = data;
         var lstXmlStrings = t.split('\r\n');
         // console.log(data);
-        var tmp = lstXmlStrings[5];
-        for (var i = 0; i < 30; i++) {
-            console.log(i, tmp[i]);
-        }
 
 
         console.log(lstXmlStrings.length);
