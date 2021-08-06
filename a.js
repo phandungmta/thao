@@ -1,6 +1,6 @@
 
 
-function myFunction(item, content) {
+function myFunction(item, content, i) {
     if (item === "<br>") {
         var mybr = document.createElement('br');
         content.appendChild(mybr);
@@ -32,27 +32,65 @@ function myFunction(item, content) {
 
 
     }
-
-
+    // if (i === 10900) {
+    //     setInterval(() => {
+    //         showImage();
+    //     }, 500);
+    //     setInterval(() => {
+    //         hidedImage();
+    //     }, 500);
+    // }
 }
 
-fetch('t.txt')
+function showImage() {
+    var image = document.getElementById('image');
+    var table = document.getElementById('content');
+    image.style.display = '';
+    table.style.display = 'none';
+    console.log("show")
+}
+function hidedImage() {
+    var image = document.getElementById('image');
+    var table = document.getElementById('content');
+    image.style.display = 'none';
+    table.style.display = '';
+    console.log("hiden")
+}
+
+
+
+fetch('t2.txt')
     .then(response => response.text())
     .then(data => {
         // Do something with your data
         var content = document.getElementById('content');
+        //var imageHtml = document.getElementById('image');
         var t = data;
-        console.log(t);
-        var lstXmlStrings = t.split('\n');
+        var lstXmlStrings = t.split('\r\n');
         // console.log(data);
 
+        var max = 0;
 
-        console.log(lstXmlStrings);
-        // lstXmlStrings.forEach((item) => myFunction(item, content));
+        console.log(lstXmlStrings.length);
+        //lstXmlStrings.forEach((item) => myFunction(item, content));
         lstXmlStrings.forEach((item, i) => {
             setTimeout(() => {
-                myFunction(item, content);
-            }, i * 5);
+                myFunction(item, content, i);
+
+            }, i * 0);
         });
+        console.log(max);
+
+
+
+
+        // for (var i = 0; i < 10; i++) {
+
+
+        //     setTimeout(() => {
+        //         showImage();
+        //     }, i * 100);
+        // }
+
 
     });
