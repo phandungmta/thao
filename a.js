@@ -66,7 +66,7 @@ fetch('t2.txt')
         var content = document.getElementById('content');
         //var imageHtml = document.getElementById('image');
         var t = data;
-        var lstXmlStrings = t.split('\r\n');
+        var lstXmlStrings = t.split('\n');
         // console.log(data);
 
         var max = 0;
